@@ -15,6 +15,8 @@
 	<description>Refactoring Kata</description>
 	<properties>
 		<java.version>11</java.version>
+        <org.mapstruct.version>1.4.2.Final</org.mapstruct.version>
+        <org.projectlombok.version>1.18.22</org.projectlombok.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -37,6 +39,12 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${org.projectlombok.version}</version>
+        </dependency>
 	</dependencies>
 
 	<build>
