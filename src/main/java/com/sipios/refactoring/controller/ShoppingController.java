@@ -2,6 +2,7 @@ package com.sipios.refactoring.controller;
 
 import com.sipios.refactoring.business.IShoppingFacade;
 import com.sipios.refactoring.business.domain.Body;
+import com.sipios.refactoring.exception.ShoppingException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -21,7 +22,7 @@ public class ShoppingController {
     private IShoppingFacade shoppingFacade;
 
     @PostMapping
-    public String getPrice(@RequestBody Body b) {
+    public String getPrice(@RequestBody Body b) throws ShoppingException {
         if (Objects.isNull(b)) {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST);
         }
